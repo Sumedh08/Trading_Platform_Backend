@@ -1,0 +1,20 @@
+package com.invest.Trading.service;
+
+
+import com.invest.Trading.Domain.VERIFICATION_TYPE;
+import com.invest.Trading.exception.UserNotFoundException;
+import com.invest.Trading.model.User;
+import jdk.jshell.spi.ExecutionControl;
+
+public interface UserService {
+
+    public User findUserProfileByJwt(String jwt) throws UserNotFoundException;
+
+    public User findUserByEmail(String email) throws UserNotFoundException;
+
+    public User findUserById(Long userId) throws UserNotFoundException ;
+
+    public User verifyUser(User user) throws UserNotFoundException ;
+
+
+}
